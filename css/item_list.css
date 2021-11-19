@@ -12,7 +12,7 @@
   text-align: center;
   display: inline-block;
   font-family: "Permanent Marker", cursive;
-  font-size: 25px;
+  font-size: 20px;
   text-shadow: 6px 6px 0px rgba(224, 224, 224, 0.459);
 }
 .navbar-box {
@@ -35,6 +35,42 @@
 .tabel-database {
   margin-right: 60px;
   margin-left: 60px;
+}
+.tabel-database p {
+  text-align: center;
+}
+#display-list td,
+#display-list th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+#display-list tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+#display-list tr:nth-child(odd) {
+  background-color: white;
+}
+#display-list tr:hover {
+  background-color: #ddd;
+}
+#display-list th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #04aa6d;
+  color: white;
+}
+#display-list td {
+  text-align: center;
+}
+#display-list td a {
+  text-decoration: none;
+  color: #04aa6d;
+}
+.add-item {
+  text-align: center;
+  text-decoration: none;
+  color: cornflowerblue;
 }
 .logout {
   color: rgb(129, 200, 248);

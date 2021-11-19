@@ -1,0 +1,31 @@
+/* TODO: update displaynya klo bisa */
+* {
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  background: rgb(0, 0, 0);
+  height: 5vw;
+}
+.name-bar {
+  color: white;
+  padding-top: 0.7vw;
+  text-align: center;
+  display: inline-block;
+  font-family: "Permanent Marker", cursive;
+  font-size: 20px;
+  text-shadow: 6px 6px 0px rgba(224, 224, 224, 0.459);
+}
+.navbar-box {
+  width: 15vw;
+  height: 4vw;
+  background-color: rgb(0, 0, 0);
+  border-radius: 30px;
+  margin: 0 auto;
+}
+.form-edit {
+  height: fit-content;
+  position: relative;
+  left: 40%;
+  top: 40%;
+}
