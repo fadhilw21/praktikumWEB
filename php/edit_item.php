@@ -67,7 +67,15 @@
                 <tr>
                     <td><label for="available_size">Available Size</label></td>
                     <td> : </td>
-                    <td><input type="text" name="available_size" value="<?= $data["available_size"]; ?>"></td>
+                    <td><select name="size" id="size" required aria-placeholder="<?= $data["available_size"]; ?>">
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="43">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                        <option value="45">45</option>
+                    </select></td>
                 </tr>
             </table>
             <button class="btn" type="submit" name="submit" >Update</button>

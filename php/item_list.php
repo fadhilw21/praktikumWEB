@@ -24,8 +24,16 @@ if (empty($_SESSION['login']) && empty($_SESSION['signup'])) {
 
 <body>
     <div class="navbar">
-        <div class="navbar-box">
-            <h1 class="name-bar">VETERAN SNEAKER SHOPPING</h1>
+        <div class="option">
+            <ul>
+                <li><a href="logout.php" class="nav-link logout">Log out</a></li>
+                <li><a href="#" class="nav-link">Profile</a></li>
+                <li><a href="item-list.php" class="nav-link">Item list</a></li>
+                <li><a href="#" class="nav-link">Home</a></li>
+            </ul>
+        </div>
+        <div class="title">
+            Veteran Stock
         </div>
     </div>
     <br>
@@ -47,7 +55,7 @@ if (empty($_SESSION['login']) && empty($_SESSION['signup'])) {
                     <th>No</th>
                     <th>Shoes</th>
                     <th>Price</th>
-                    <th>Available Size</th>
+                    <th>Size</th>
                     <th>option</th>
 
                 </tr>
@@ -55,26 +63,27 @@ if (empty($_SESSION['login']) && empty($_SESSION['signup'])) {
                     $i = 1;
                     $query = mysqli_query($conn, "SELECT * FROM sneaker WHERE user_id = $user_id");
                     while($data = mysqli_fetch_assoc($query)) : ?>
-                <tr>
-                    <td><?= $i ?></td>
-                    <td> <?php echo $data["name"]; ?> </td>
-                    <td> <?php echo $data["price"]; ?> </td>
-                    <td> <?php echo $data["available_size"]; ?> </td>
-                    <td> <a href=edit_item.php?id=<?php echo $data["id"]; ?>>edit</a> | 
-                        <a href=delete.php?id=<?php echo $data["id"]; ?>>hapus</a>
-                    </td>
-                </tr>
-
+                    <tr>
+                        <td><?= $i ?></td>
+                        <td> <a href="details.php?id=<?=$data["id"];?>" class="goto-details" title="See Details"> 
+                            <?php echo $data["name"]; ?> 
+                            </a>
+                        </td>
+                        <td> <?php echo $data["price"]; ?> </td>
+                        <td> <?php echo $data["available_size"]; ?> </td>
+                        <td> <a href=edit_item.php?id=<?= $data["id"]; ?> onclick="return confirm("Are you sure?")>edit</a> | 
+                            <a href=delete.php?id=<?= $data["id"]; ?> onclick="return confirm("Are you sure?")>hapus</a>
+                        </td>
+                    </tr>
                 <?php $i++; endwhile; ?>
             <?php endif; ?>
         </table>
     </div>
     <div class="menu-logout admin-bawah ">
         <a class="add-item" href="add_item.php?user_id=<?= $user_id?>">Add Item</a> <br>
-        <?php
-        echo $_SESSION['username'];
-        ?>
-        <a class="dropdown-item logout" href="logout.php">Logout</a>
+        <p>
+            Username : <?= $_SESSION['username'];?>
+        </p>
     </div>
 
 

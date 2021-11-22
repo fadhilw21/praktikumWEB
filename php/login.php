@@ -24,12 +24,11 @@
                         alert('Berhasil login');
                     </script>
                 ";
-                // var_dump($_SESSION['username']);
-                $_SESSION['login'] = true; 
+                // var_dump($_SESSION['username']); 
                 header("Location: item_list.php");
                 exit;
             }
-
+            // TODO : upload image
             $error = true;
 
             if($error) {

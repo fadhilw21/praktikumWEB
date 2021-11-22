@@ -52,7 +52,7 @@
     // $data = mysqli_fetch_array($query);
     ?>
     <div class="form-edit">
-        <form method="POST" action="">
+        <form method="POST" action="" enctype="multipart/form-data">
         <input type="hidden" name="user_id" value="<?= "$user_id"?>">
             <table border="0" cellspacing="0" cellpadding="5">
                 <tr>
@@ -68,7 +68,20 @@
                 <tr>
                     <td><label for="available_size">Available Size</label></td>
                     <td> : </td>
-                    <td><input type="text" name="available_size" placeholder="Size"></td>
+                    <td><select name="size" id="size" required>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="43">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                        <option value="45">45</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td><label for="image">Image</label></td>
+                    <td> : </td>
+                    <td><input type="file" name="image" id="image" required></td>
                 </tr>
             </table>
             <button class="btn" type="submit" name="submit" >ADD</button>

@@ -24,13 +24,13 @@
                 header("Location: item_list.php");
                 exit;
             }
+        }else{
+            echo"
+                <script>
+                    alert('User Account tidak terdaftar');
+                </script>
+            ";
         }
-
-        echo"
-            <scrip>
-                alert('User Account tidak terdaftar');
-            </scrip>
-        "
     ?>
 
     <div class="navbar">

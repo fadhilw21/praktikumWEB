@@ -18,8 +18,10 @@ function checkLogin($data){
         $row = mysqli_fetch_assoc($result);
         // var_dump($row);
         // var_dump((strcmp($password,$row["password"]) === 0));
-        if(strcmp($password,$row["password"]) === 0){
+        if(password_verify($password,$row["password"])){
             $_SESSION['username'] = $username;
+            $_SESSION['login'] = true;
+            $_SESSION['user_id'] = $row["id"];
             return true;
         };
     };
@@ -80,12 +82,61 @@ function addItem($data){
     $user_id = $data["user_id"];
     $name = htmlspecialchars($data["name"]);
     $price = htmlspecialchars($data["price"]);
-    $available_size = htmlspecialchars($data["available_size"]);
+    $available_size = filter_input(INPUT_POST,'size',FILTER_SANITIZE_STRING);
+    
+    // image
+    $image = uploadImage();
 
-    $query = "INSERT INTO sneaker VALUES ('',$user_id,'$name',$price,'$available_size')";
+    $query = "INSERT INTO sneaker VALUES ('',$user_id,'$name',$price,'$available_size','$image')";
     mysqli_query($conn,$query);
 
     return mysqli_affected_rows($conn);
+}
+
+function uploadImage(){
+    $imageName = $_FILES['image']['name'];
+    $imageSize = $_FILES['image']['size'];
+    $tmpName = $_FILES['image']['tmp_name'];
+    $error = $_FILES['image']['error'];
+
+    if($error === 4){
+        echo "
+            <script>
+                alert('Please choose an image');
+            </script>
+        ";
+        return false;
+    }
+
+    $exFileValid = ['jpg','jpeg','png'];
+    $exFile = explode('.',$imageName);
+    $exFile = strtolower(end($exFile));
+
+    if(!in_array($exFile,$exFileValid)){
+        echo "
+            <script>
+                alert('Your file must be an image');
+            </script>
+        ";
+        return false;
+    }
+
+    if($imageSize > 5000000){
+        echo "
+            <script>
+                alert('Your image size too large');
+            </script>
+        ";
+        return false;
+    }
+
+    $imageName = uniqid();
+    $imageName .= '.';
+    $imageName .= $exFile;
+
+    move_uploaded_file($tmpName,'../image/'.$imageName);
+
+    return $imageName;
 }
 
 function updateItem($data){
@@ -94,7 +145,7 @@ function updateItem($data){
     $user_id = $data["user_id"];
     $name = htmlspecialchars($data["name"]);
     $price = htmlspecialchars($data["price"]);
-    $available_size = htmlspecialchars($data["available_size"]);
+    $available_size = filter_input(INPUT_POST,'size',FILTER_SANITIZE_STRING);
 
     $query = "UPDATE sneaker SET
             name = '$name',
