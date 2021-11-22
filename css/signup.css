@@ -1,8 +1,9 @@
 body {
-  background-image: url("login_sbackground.jpg");
+  background-image: url("../image/login_background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  max-height: max-content;
 }
 * {
   margin: 0;
@@ -14,12 +15,12 @@ body {
 }
 .name-bar {
   color: white;
-  padding-top: 0.7vw;
+  padding-top: 0;
   text-align: center;
   display: inline-block;
   font-family: "Permanent Marker", cursive;
-  font-size: 25px;
-  text-shadow: 6px 6px 0px rgba(224, 224, 224, 0.459);
+  font-size: 20px;
+  text-shadow: 4px 4px 4px rgba(224, 224, 224, 0.459);
 }
 .navbar-box {
   width: 15vw;
@@ -37,40 +38,51 @@ body {
   background-repeat: repeat;
   background-size: cover;
   position: relative;
-  width: 40vw;
-  height: 25vw;
-  background-image: url("login_box_background.jpg");
+  width: 45vw;
+  height: 36.5vw;
+  background-image: url("../image/login_box_background.jpg");
   position: relative;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .inside-box-login {
   width: 300px;
-  height: 350px;
+  height: 90%;
   background-color: white;
   opacity: 0.8;
-  margin-top: 3vw;
+  margin-top: 2vw;
   margin-left: 3vw;
   border-radius: 7px;
   position: absolute;
 }
 
-#login-text {
+#login-title {
   opacity: 1;
   margin-top: 0.5cm;
-  display: inline-block;
   text-align: center;
-  margin-left: 30%;
+  margin-bottom: 10px;
 }
 
 .login-form {
   text-align: center;
   display: flex;
 }
-.inputPassword,
-.inputUsername {
+.password,
+.username,
+.email,
+.valpassword {
   text-align: center;
   margin-left: 1.3vw;
+}
+
+.signup {
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+}
+
+.signup p a {
+  text-decoration: none;
+  color: cornflowerblue;
 }
 
 .copyright {

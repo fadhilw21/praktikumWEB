@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  height: 60px;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+}
+.navbar .title {
+  position: absolute;
+  top: 5%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  color: white;
+  margin-left: 10px;
+}
+.navbar .option ul {
+  list-style-type: none;
+  margin-top: 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.navbar .option .nav-link {
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+}
+.navbar .option ul li {
+  display: block;
+  float: right;
+  margin-right: 20px;
+  padding-right: 10px;
+}
+.navbar .option .nav-link:hover::after {
+  content: "";
+  display: block;
+  border-bottom: 4px solid white;
+  width: 50%;
+  margin: auto;
+}
+.navbar .option ul li:hover {
+  transform: translate(0, -5px);
+  transition: 0.5s;
+}
+.form-edit {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  left: 40%;
+}

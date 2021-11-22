@@ -1,3 +1,4 @@
+/* TODO: update displaynya klo bisa */
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +13,7 @@
   text-align: center;
   display: inline-block;
   font-family: "Permanent Marker", cursive;
-  font-size: 25px;
+  font-size: 20px;
   text-shadow: 6px 6px 0px rgba(224, 224, 224, 0.459);
 }
 .navbar-box {
@@ -23,5 +24,11 @@
   margin: 0 auto;
 }
 .form-edit {
-  text-align: center;
+  height: 500px;
+  position: relative;
+  left: 40%;
+  top: 70%;
+}
+.input {
+  text-align: left;
 }

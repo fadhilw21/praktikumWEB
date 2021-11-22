@@ -1,0 +1,89 @@
+body {
+  background-image: url("../image/login_background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  max-height: max-content;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  background: rgb(0, 0, 0);
+  height: 5vw;
+}
+.name-bar {
+  color: white;
+  padding-top: 0;
+  text-align: center;
+  display: inline-block;
+  font-family: "Permanent Marker", cursive;
+  font-size: 20px;
+  text-shadow: 4px 4px 4px rgba(224, 224, 224, 0.459);
+}
+.navbar-box {
+  width: 15vw;
+  height: 4vw;
+  background-color: rgb(0, 0, 0);
+  border-radius: 30px;
+  margin: 0 auto;
+}
+.box-login {
+  background-size: cover;
+  margin-top: 350px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-repeat: repeat;
+  background-size: cover;
+  position: relative;
+  width: 40vw;
+  height: 30vw;
+  background-image: url("../image/login_box_background.jpg");
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.inside-box-login {
+  width: 300px;
+  height: 350px;
+  background-color: white;
+  opacity: 0.8;
+  margin-top: 2.5vw;
+  margin-left: 3vw;
+  border-radius: 7px;
+  position: absolute;
+}
+
+#login-title {
+  opacity: 1;
+  margin-top: 0.5cm;
+  display: inline-block;
+  text-align: center;
+  margin-left: 30%;
+}
+
+.login-form {
+  text-align: center;
+  display: flex;
+}
+.inputPassword,
+.inputUsername {
+  text-align: center;
+  margin-left: 1.3vw;
+}
+
+.signup {
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+}
+
+.signup p a {
+  text-decoration: none;
+  color: cornflowerblue;
+}
+
+.copyright {
+  text-align: center;
+}
