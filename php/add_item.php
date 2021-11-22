@@ -24,8 +24,16 @@
         }
     ?>
     <div class="navbar">
-        <div class="navbar-box">
-            <h1 class="name-bar">VETERAN SNEAKER SHOPPING</h1>
+        <div class="option">
+            <ul>
+                <li><a href="logout.php" class="nav-link logout">Log out</a></li>
+                <li><a href="#" class="nav-link">Profile</a></li>
+                <li><a href="item-list.php" class="nav-link">Item list</a></li>
+                <li><a href="#" class="nav-link">Home</a></li>
+            </ul>
+        </div>
+        <div class="title">
+            Veteran Stock
         </div>
     </div>
     <?php
