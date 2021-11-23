@@ -15,30 +15,30 @@
 
 <body>
     <?php
-        require 'database.php';
-        if(isset($_POST["submit"])){
-            // var_dump(checkLogin($_POST));
-            if(checkLogin($_POST)){
-                echo "
+    require 'database.php';
+    if (isset($_POST["submit"])) {
+        // var_dump(checkLogin($_POST));
+        if (checkLogin($_POST)) {
+            echo "
                     <script>
                         alert('Berhasil login');
                     </script>
                 ";
-                // var_dump($_SESSION['username']); 
-                header("Location: item_list.php");
-                exit;
-            }
-            // TODO : upload image
-            $error = true;
+            // var_dump($_SESSION['username']); 
+            header("Location: item_list.php");
+            exit;
+        }
+        // TODO : upload image
+        $error = true;
 
-            if($error) {
-                // echo "
-                //     <script>
-                //         alert('wrong password and username');
-                //     </script>
-                // ";
-            }
-        };
+        if ($error) {
+            // echo "
+            //     <script>
+            //         alert('wrong password and username');
+            //     </script>
+            // ";
+        }
+    };
     ?>
 
 

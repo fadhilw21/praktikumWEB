@@ -28,7 +28,7 @@
             <ul>
                 <li><a href="logout.php" class="nav-link logout">Log out</a></li>
                 <li><a href="#" class="nav-link">Profile</a></li>
-                <li><a href="item-list.php" class="nav-link">Item list</a></li>
+                <li><a href="item_list.php" class="nav-link">Item list</a></li>
                 <li><a href="#" class="nav-link">Home</a></li>
             </ul>
         </div>
@@ -59,43 +59,102 @@
     // $query = mysqli_query($conn, "SELECT * from sneaker where user_id ");
     // $data = mysqli_fetch_array($query);
     ?>
-    <div class="form-edit">
-        <form method="POST" action="" enctype="multipart/form-data">
-            <input type="hidden" name="user_id" value="<?= "$user_id" ?>">
-            <br><br>
-            <table border="0" cellspacing="0" cellpadding="5">
-                <tr>
-                    <td><label for="name">Shoes</label></td>
-                    <td> </td>
-                    <td><input class="form-control" type="text" name="name" placeholder="Name Shoes"></td>
-                </tr>
-                <tr>
-                    <td><label for="price">Price</label></td>
-                    <td> </td>
-                    <td><input class="form-control" type="text" name="price" placeholder="0"></td>
-                </tr>
-                <tr>
-                    <td><label for="available_size">Available Size &nbsp;</label></td>
-                    <td> </td>
-                    <td><select class="form-control" name="size" id="size" required>
-                            <option value="39">39</option>
-                            <option value="40">40</option>
-                            <option value="41">41</option>
-                            <option value="43">42</option>
-                            <option value="43">43</option>
-                            <option value="44">44</option>
-                            <option value="45">45</option>
-                        </select></td>
-                </tr>
-                <tr>
-                    <td><label for="image">Image</label></td>
-                    <td> </td>
-                    <td><input class="form-control" type="file" name="image" id="image" required></td>
-                </tr>
-            </table>
-            <button class="btn btn-success" type="submit" name="submit">ADD</button>
-        </form>
+    <div class="box-login" style="  width: 550px;
+    opacity: 0.8;
+  height:570px;
+  background-color: black;
+  margin-top: 5vw;
+  margin-left: 35vw;
+  border-radius: 15px;
+  position: absolute;">
+        <div id="form-edit" style=" margin-left:6vw">
+            <form method="POST" action="" enctype="multipart/form-data">
+                <input type="hidden" name="user_id" value="<?= "$user_id" ?>">
+                <br><br>
+                <table border="0" cellspacing="0" cellpadding="5">
+                    <tr>
+                        <h6 style="color: white;">Shoes</h6>
+                        <td><input style="width:8.5cm; height:1cm" class="form-control" type="text" name="name" placeholder="Name Shoes"></td>
+                    </tr>
+                </table>
+                <br>
+                <table>
+                    <tr>
+                        <h6 style="color: white;">Price</h6>
+                        <td><input style="width:8.5cm; height:1cm" class="form-control" type="text" name="price" placeholder="0"></td>
+                    </tr>
+                </table>
+                <br>
+                <table>
+                    <tr>
+                        <h6 style="color: white;">Available Size</h6>
+                        <td><select style="width:8.5cm; height:1cm" class="form-control" name="size" id="size" required>
+                                <option value="39">39</option>
+                                <option value="40">40</option>
+                                <option value="41">41</option>
+                                <option value="43">42</option>
+                                <option value="43">43</option>
+                                <option value="44">44</option>
+                                <option value="45">45</option>
+                            </select></td>
+                    </tr>
+                </table>
+                <br>
+                <table>
+                    <tr>
+                        <h6 style="color: white;">Image</h6>
+                        <td><input class="form-control" type="file" name="image" id="image" required></td>
+                    </tr>
+                </table>
+                <br>
+                <button style="width:8.5cm; height:1cm; margin-top:1cm" class="btn btn-success" type="submit" name="submit">ADD</button>
+            </form>
+        </div>
     </div>
+
+    <!--
+backup edit
+
+            <div class="box-login">
+        <div class="form-edit">
+            <form method="POST" action="" enctype="multipart/form-data">
+                <input type="hidden" name="user_id" value="<?= "$user_id" ?>">
+                <br><br>
+                <table border="0" cellspacing="0" cellpadding="5">
+                    <tr>
+                        <td><label for="name">Shoes</label></td>
+                        <td> </td>
+                        <td><input class="form-control" type="text" name="name" placeholder="Name Shoes"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="price">Price</label></td>
+                        <td> </td>
+                        <td><input class="form-control" type="text" name="price" placeholder="0"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="available_size">Available Size &nbsp;</label></td>
+                        <td> </td>
+                        <td><select class="form-control" name="size" id="size" required>
+                                <option value="39">39</option>
+                                <option value="40">40</option>
+                                <option value="41">41</option>
+                                <option value="43">42</option>
+                                <option value="43">43</option>
+                                <option value="44">44</option>
+                                <option value="45">45</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td><label for="image">Image</label></td>
+                        <td> </td>
+                        <td><input class="form-control" type="file" name="image" id="image" required></td>
+                    </tr>
+                </table>
+                <button class="btn btn-success" type="submit" name="submit">ADD</button>
+            </form>
+        </div>
+    </div>
+     -->
 </body>
 
 </html>

@@ -51,38 +51,54 @@
             <h1 class="name-bar">VETERAN SNEAKER SHOPPING</h1>
         </div>
     </div>
-    <div class="form-edit">
-        <form method="POST" action="">
-            <input type="hidden" name="id" value="<?= $data["id"] ?>">
-            <input type="hidden" name="user_id" value="<?= $data["user_id"] ?>">
-            <table border="0" cellspacing="0" cellpadding="5">
-                <tr>
-                    <td><label for="name">Shoes</label></td>
-                    <td> </td>
-                    <td><input class="form-control" type="text" name="name" value="<?= $data["name"]; ?>"></td>
-                </tr>
-                <tr>
-                    <td><label for="price">Price</label></td>
-                    <td> </td>
-                    <td><input class="form-control" type="text" name="price" value="<?= $data["price"]; ?>"></td>
-                </tr>
-                <tr>
-                    <td><label for="available_size">Available Size &nbsp;</label></td>
-                    <td> </td>
-                    <td><select class="form-control" name="size" id="size" required aria-placeholder="<?= $data["available_size"]; ?>">
-                            <option value="39">39</option>
-                            <option value="40">40</option>
-                            <option value="41">41</option>
-                            <option value="43">42</option>
-                            <option value="43">43</option>
-                            <option value="44">44</option>
-                            <option value="45">45</option>
-                        </select></td>
-                </tr>
 
-                <br><br><br>
-            </table>
-            <!--<div class="input">
+
+    <div id="inside-box-login" style="  width: 450px;
+  height:420px;
+  background-color: black;
+  margin-top: 5vw;
+  margin-left: 38vw;
+  border-radius: 15px;
+  position: absolute;">
+        <div class="form-edit" style=" margin-left:6vw">
+            <form method="POST" action="">
+                <input type="hidden" name="id" value="<?= $data["id"] ?>">
+                <input type="hidden" name="user_id" value="<?= $data["user_id"] ?>">
+                <br><br>
+                <table border="0" cellspacing="0" cellpadding="5">
+                    <tr>
+                        <h6 style="color: white;">Shoes</h6>
+                        <td><input style="width:6cm; height:1cm" class="form-control" type="text" name="name" value="<?= $data["name"]; ?>"></td>
+                    </tr>
+                </table>
+                <br>
+                <table border="0" cellspacing="0" cellpadding="5">
+                    <tr>
+                        <h6 style="color: white;">Price</h6>
+                        <td><input style="width:6cm; height:1cm" class=" form-control" type="text" name="price" value="<?= $data["price"]; ?>"></td>
+                    </tr>
+                </table>
+                <br>
+                <table border="0" cellspacing="0" cellpadding="5">
+                    <tr>
+                        <h6 style="color: white;">Available Size</h6>
+                        <td><select style="width:6cm; height:1cm" class="form-control" name="size" id="size" required aria-placeholder="<?= $data["available_size"]; ?>">
+                                <option value="39">39</option>
+                                <option value="40">40</option>
+                                <option value="41">41</option>
+                                <option value="43">42</option>
+                                <option value="43">43</option>
+                                <option value="44">44</option>
+                                <option value="45">45</option>
+                            </select></td>
+                    </tr>
+                </table>
+
+                <button style="width: 5cm; margin-left:0.8vw; margin-top:1cm" class=" btn btn-danger update col-sm-2 col-form-label" type="submit" name="submit">Update</button>
+            </form>
+        </div>
+    </div>
+    <!--<div class="input">
                 <div class="shoes col-xs-2">
                     <label class="col-sm-2 col-form-label" for="name">Shoes</label>
                     <input class="form-control shoes-box" type="text" name="name" value="<?= $data["name"]; ?>">
@@ -104,9 +120,7 @@
                     </select>
                 </div>
             </div>-->
-            <br>
-            <button class=" btn btn-danger update col-sm-2 col-form-label" type="submit" name="submit">Update</button>
-        </form>
+
     </div>
 
 

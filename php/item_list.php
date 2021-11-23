@@ -50,14 +50,13 @@ if (empty($_SESSION['login']) && empty($_SESSION['signup'])) {
         if (empty($isFill["name"])) : ?>
             <p>--- No Item Selected ---</p>
         <?php else : ?>
-            <table class="table table-dark table-hover database" id="display-list">
+            <table class="table table-hover database" id="display-list">
                 <tr class="tr-atas">
                     <th>No</th>
                     <th>Shoes</th>
                     <th>Price</th>
                     <th>Size</th>
-                    <th>Image</th>
-                    <th>option</th>
+                    <th>Option</th>
 
                 </tr>
                 <?php
@@ -66,13 +65,13 @@ if (empty($_SESSION['login']) && empty($_SESSION['signup'])) {
                 while ($data = mysqli_fetch_assoc($query)) : ?>
                     <tr>
                         <td><?= $i ?></td>
-                        <td> <a href="details.php?id=<?= $data["id"]; ?>" class="goto-details" title="See Details">
+                        <td> <a href="details.php?id=<?= $data["id"]; ?>" class="goto-details shoes" style="color: black;" title="See Details">
                                 <?php echo $data["name"]; ?>
                             </a>
                         </td>
-                        <td> <?php echo $data["price"]; ?> </td>
+                        <td> &dollar;<?php echo $data["price"]; ?> </td>
                         <td> <?php echo $data["available_size"]; ?> </td>
-                        <td> <img src='../image/<?php echo $data["image"] ?>' width='130' height='100' /> </td>
+                        <!--<td> <img src='../image/<?php echo $data["image"] ?>' width='130' height='100' /> </td>-->
                         <td> <a href=edit_item.php?id=<?= $data["id"]; ?> onclick="return confirm(" Are you sure?")>edit</a> |
                             <a href=delete.php?id=<?= $data["id"]; ?> onclick="return confirm(" Are you sure?")>hapus</a>
                         </td>

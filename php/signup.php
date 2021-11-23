@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,29 +9,30 @@
         @import "../css/signup.css";
         @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
     </style>
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Sign Up</title>
 </head>
+
 <body>
     <?php
-        require 'database.php';
-        if(isset($_POST["submit"])){
-            if(insertUserAccount($_POST) > 0){
-                echo"
+    require 'database.php';
+    if (isset($_POST["submit"])) {
+        if (insertUserAccount($_POST) > 0) {
+            echo "
                     <script>
                         alert('User account berhasil terdaftar!');
                     </script>
                 ";
-                header("Location: item_list.php");
-                exit;
-            }
-        }else{
-            echo"
+            header("Location: item_list.php");
+            exit;
+        }
+    } else {
+        echo "
                 <script>
                     alert('User Account tidak terdaftar');
                 </script>
             ";
-        }
+    }
     ?>
 
     <div class="navbar">
@@ -82,4 +84,5 @@
         </p>
     </div>
 </body>
+
 </html>
